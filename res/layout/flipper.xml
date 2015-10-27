@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundProgress="http://schemas.android.com/apk/res/com.example.nfc"
+    android:id="@+id/flipper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/get_a_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="20sp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="您有一条未读消息："
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/get_message"
+                android:layout_width="fill_parent"
+                android:layout_height="240sp"
+                android:autoLink="all"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:scrollbars="vertical"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/get_a_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="70sp"
+                    android:layout_height="70sp"
+                    android:src="@drawable/contact_photo" >
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20sp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="姓名： "
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20sp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="电话： "
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/contact_cancel"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector"
+                    android:text="取消" />
+
+                <Button
+                    android:id="@+id/contact_send"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_selector"
+                    android:text="保存" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/get_a_file"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/main_background" >
+
+        <com.example.nfc.CircleProgress
+            android:id="@+id/roundBar_rev"
+            android:layout_width="390px"
+            android:layout_height="390px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bigcirclebg"
+            roundProgress:Inside_Interval="5"
+            roundProgress:Paint_Color="0xff0085cd"
+            roundProgress:Paint_Width="10"
+            roundProgress:fill="false"
+            roundProgress:max="100" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/schedule_circle" >
+        </ImageView>
+
+        <RelativeLayout
+            android:id="@+id/R_rev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/file_size_rev_image"
+                android:layout_width="360px"
+                android:layout_height="360px"
+                android:gravity="center"
+                android:src="@drawable/file_size_label"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:id="@+id/file_type_rev_label"
+                android:layout_width="360px"
+                android:layout_height="360px"
+                android:gravity="center"
+                android:src="@drawable/share_file_button"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:layout_width="360px"
+                android:layout_height="360px"
+                android:gravity="center"
+                android:src="@drawable/filename_label"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/percentage_rev"
+                android:layout_width="70px"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="0%"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/file_name_rev_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/file_size_rev_image"
+                android:layout_alignParentLeft="@+id/file_size_rev_image"
+                android:layout_marginBottom="90px"
+                android:layout_marginLeft="55px"
+                android:text="fileName"
+                android:textSize="15dip"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/file_size_rev_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/file_size_rev_image"
+                android:layout_alignRight="@+id/file_size_rev_image"
+                android:layout_marginBottom="90px"
+                android:layout_marginRight="55px"
+                android:text="0B"
+                android:textSize="15dip"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/file"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/btn_selector"
+            android:layout_centerInParent="true"
+            android:text="分享文件" />
+        <Button
+            android:id="@+id/card"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/btn_selector"
+            android:layout_centerInParent="true"
+            android:text="分享联系人" />
+        <Button
+            android:id="@+id/followOthers"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/btn_selector"
+            android:layout_centerInParent="true"
+            android:text="微博互粉" />
+        
+    </LinearLayout>
+
+</RelativeLayout>
